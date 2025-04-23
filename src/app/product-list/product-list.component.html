@@ -12,8 +12,11 @@
     <p *ngIf="product.description" class="mr-2 my-3">
       Discription: {{ product.description }}
     </p>
-    <button class="px-2 py-1 rounded-md text-white text-xl bg-blue-500" (click)="share()">
-      Share
-    </button>
+    <div class="flex gap-3">
+      <button class="px-2 py-1 rounded-md text-white text-xl bg-blue-500" (click)="share()">
+        Share
+      </button>
+      <app-product-alerts [product]="product"></app-product-alerts>
+    </div>
   </div>
 </div>
