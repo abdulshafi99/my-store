@@ -16,7 +16,7 @@
       <button class="px-2 py-1 rounded-md text-white text-xl bg-blue-500" (click)="share()">
         Share
       </button>
-      <app-product-alerts [product]="product"></app-product-alerts>
+      <app-product-alerts [product]="product" (notifiy)="onNotify()"></app-product-alerts>
     </div>
   </div>
 </div>
