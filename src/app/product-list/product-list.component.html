@@ -1,0 +1,19 @@
+<div class="container mx-auto">
+  <h2 class="text-4xl text-slate-500 font-semibold text-center my-3">Products</h2>
+  <div 
+    class="p-2 bg-slate-200 rounded-md my-2"
+    *ngFor="let product of products"
+  >
+    <h3 class="text-xl font-semibold text-slate-500">
+      <a [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+    <p *ngIf="product.description" class="mr-2 my-3">
+      Discription: {{ product.description }}
+    </p>
+    <button class="px-2 py-1 rounded-md text-white text-xl bg-blue-500" (click)="share()">
+      Share
+    </button>
+  </div>
+</div>
